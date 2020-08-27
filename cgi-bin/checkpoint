@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\wamp64\\www\\test\\cgi-bin\\model.tflearn"
+all_model_checkpoint_paths: "C:\\wamp64\\www\\test\\cgi-bin\\model.tflearn"

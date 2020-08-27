@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script
+         src="https://kit.fontawesome.com/82c7bbe089.js"
+         crossorigin="anonymous"
+      ></script>
+      <link rel="stylesheet" href="style.css" />
+      <title>CGI Python Test</title>
+   </head>
+   <body>
+      <div style="height: 200vh;"></div>
+      <button
+         id="chatbotStart"
+         class="chatbot-start green pointer no-outline no-border shadow fixed rounded hover-animation"
+      >
+         <i class="fas fa-comment-dots"></i>
+         <i class="fas fa-chevron-down"></i>
+      </button>
+      <div id="chatbot" class="chatbot shadow fixed">
+         <div class="chatbot-container">
+            <div class="chatbot-header green bottom-shadow">
+               <div class="chatbot-icon">
+                  <div class="robot not-selectable">&#x1F916;</div>
+                  <span class="online rounded"></span>
+               </div>
+               <h4 class="dieselbot">DieselBot</h4>
+               <div class="chatbot-options">
+                  <button class="pointer no-outline">
+                     <i class="fas fa-ellipsis-h"></i>
+                  </button>
+                  <ul id="chatbotOptions" class="chatbot-options-select shadow">
+                     <li id="chatbotHide" class="chatbot-options-li pointer">
+                        Esconder
+                     </li>
+                     <li id="chatbotReport" class="chatbot-options-li pointer">
+                        Reportar Problema
+                     </li>
+                     <li
+                        id="chatbotSuggestion"
+                        class="chatbot-options-li pointer"
+                     >
+                        Sugerir Tópico
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div id="chatbotChat" class="chatbot-chat">
+               <div class="chatbot-conv-selection">
+                  <button
+                     id="chatbotGuide"
+                     class="chatbot-selection-choice pointer"
+                  >
+                     <span>&#x1F680; Guíame</span>
+                  </button>
+                  <button
+                     id="chatbotFAQ"
+                     class="chatbot-selection-choice pointer"
+                  >
+                     <span>&#x1F914; Dudas</span>
+                  </button>
+                  <button
+                     id="chatbotTalk"
+                     class="chatbot-selection-choice pointer"
+                  >
+                     <span>&#x1F4AC; Chatear</span>
+                  </button>
+               </div>
+               <div class="chatbot-conv chatbot-received">
+                  <span>
+                     ¡Hola! Yo soy DieselBot y estoy aquí para ayudarte 😊 Ya
+                     sea para guiarte a encontrar tu vehículo ideal, responder
+                     dudas en cuanto al sistema o simplemente chatear un poco.
+                  </span>
+               </div>
+               <span class="pseudo-margin"></span>
+            </div>
+            <div class="chatbot-send">
+               <input
+                  id="chatbotInput"
+                  class="chatbot-text-input no-outline no-border rounded shadow"
+                  type="text"
+                  autocomplete="off"
+               />
+               <button
+                  id="chatbotSend"
+                  class="chatbot-text-send no-outline pointer green no-border rounded shadow"
+               >
+                  <i class="fas fa-paper-plane"></i>
+               </button>
+            </div>
+         </div>
+         <div id="chatbotModal" class="chatbot-modal">
+            <div class="chatbot-modal-container">
+               <h5 id="chatbotModalTitle"></h5>
+               <div
+                  id="chatbotModalContent"
+                  class="chatbot-modal-content"
+               ></div>
+               <span id="chatbotFormErrorMsg"></span>
+               <div class="chatbot-modal-submit">
+                  <button id="chatbotFormSubmit" class="pointer">
+                     <i class="fas fa-check"></i>
+                  </button>
+                  <button id="chatbotFormCancel" class="pointer">
+                     <i class="fas fa-times"></i>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="effectsJS.js"></script>
+      <script src="chatbotJS.js"></script>
+   </body>
+</html>
